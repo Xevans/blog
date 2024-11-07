@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel,  } from '@headlessui/react'
 import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import Footer from '../../components/footer/footer.component';
 
 
 
@@ -120,7 +121,14 @@ function Navigation() {
       </DisclosurePanel>
     </Disclosure>
 
-    <Outlet />
+    <div className="bg-white dark:bg-gray-900">
+        <div className='mx-6'>
+            <Outlet />
+        </div>
+        <div>
+            <Footer />
+        </div>
+    </div>
     </>
   )
 }

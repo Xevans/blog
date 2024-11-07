@@ -1,8 +1,15 @@
+import BlogPreview from "../../components/blog-preview/blog-preview.component";
+import PersonalMessage from "../../components/personal-message/personal-message.component";
 
 function Home() {
 
     return (
-        <div className="text-3xl font-bold underline" >Home</div>
+        <>
+            <PersonalMessage />
+            <BlogPreview />
+        </>
+
+
     )
 }
 
