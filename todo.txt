@@ -1,0 +1,7 @@
+Brainstorm blog designs
+- what content will the site contain?
+- about me (home)
+    - general about me + picture
+    - preview of career interests: favorite technologies, roles of interest, plans
+    - preview of hobbies: gaming, coding useful tools, playing around with 8-bit music making, animation, writing my novel, game development,
+    - coding projects:

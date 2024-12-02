@@ -1,0 +1,5 @@
+Deploying Vite is slightly different from deploying with CRA.
+Noteable changes include but not limited to:
+Vite does not create a build folder, it creates a dist folder. Same function, diff name.
+
+Original intention was to design app around github pages, but due to incompatibilities with react router, netlify will be the target.

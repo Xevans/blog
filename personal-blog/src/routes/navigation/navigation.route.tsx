@@ -11,7 +11,7 @@ function Navigation() {
     const [currentRoute, setCurrentRoute] = useState('home');
 
     const navigation = [
-        { name: 'Home', href: '/home', current: checkRoute('home') },
+        { name: 'Home', href: '/', current: checkRoute('home') },
         { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('coding') },
         { name: 'Writing Projects', href: '/writing-projects', current: checkRoute('writing') },
         { name: 'Hobby Blog', href: '/hobbies', current: checkRoute('hobbies') },
