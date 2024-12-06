@@ -5,3 +5,11 @@ Brainstorm blog designs
     - preview of career interests: favorite technologies, roles of interest, plans
     - preview of hobbies: gaming, coding useful tools, playing around with 8-bit music making, animation, writing my novel, game development,
     - coding projects:
+
+
+Project pages (links in the nav) will load the featured blog onto the main left half of the screen.
+Leaving the remaining 20% for a column of more blogs within the category that can be scrolled seperately.
+
+
+Each post is going to have to be its own route.
+This model supports routing from the main categories and authoring new posts.
