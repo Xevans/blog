@@ -1,14 +1,22 @@
 import { Disclosure, DisclosureButton, DisclosurePanel,  } from '@headlessui/react'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Footer from '../../components/footer/footer.component';
+import { NavContext } from '../../contexts/nav-context/nav-context.contexts';
+import { NavContextType } from '../../types/nav/types.nav';
 
 
 
 
 function Navigation() {
 
-    const [currentRoute, setCurrentRoute] = useState('home');
+    const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
+
+    useEffect(() => {
+      updateRoute(current_route);
+    },[current_route, updateRoute]);
+
+    const [currentRoute, setCurrentRoute] = useState(current_route);
 
     const navigation = [
         { name: 'Home', href: '/', current: checkRoute('home') },

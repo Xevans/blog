@@ -13,3 +13,11 @@ Leaving the remaining 20% for a column of more blogs within the category that ca
 
 Each post is going to have to be its own route.
 This model supports routing from the main categories and authoring new posts.
+
+coding projects, renders projects list.
+each is a route to a new page, manually authored by me.
+
+Do for each category, then start authoring!
+
+12/18
+rename mission class and file to Dev-journey

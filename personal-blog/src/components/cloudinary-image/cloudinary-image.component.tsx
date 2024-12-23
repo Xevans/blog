@@ -12,7 +12,7 @@ interface CloudinaryProps {
     definitions: string;
 }
 
-const CloudinaryImage: React.FC<CloudinaryProps> = (props) => {
+const CloudinaryImageX: React.FC<CloudinaryProps> = (props) => {
 
     const {name, width, height, definitions } = props;
     
@@ -25,9 +25,17 @@ const CloudinaryImage: React.FC<CloudinaryProps> = (props) => {
             .quality('auto')
             .resize(auto().gravity(autoGravity()).width(width).height(height)); // Transform the image: auto-crop to square aspect_ratio
 
-    return (
-        <AdvancedImage className={definitions} cldImg={img} alt="" width={width} height={height}/>
-    )
+    if (width < 1 && height < 1) {
+        return (
+            <AdvancedImage className={definitions} cldImg={img} alt=""/>
+        )
+    }
+    else {
+        return (
+            <AdvancedImage className={definitions} cldImg={img} alt="" width={width} height={height}/>
+        )
+    }
+    
 }
 
-export default CloudinaryImage;
+export default CloudinaryImageX;

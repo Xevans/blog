@@ -1,4 +1,4 @@
-import CloudinaryImage from "../cloudinary-image/cloudinary-image.component";
+import CloudinaryImageX from "../cloudinary-image/cloudinary-image.component";
 
 
 function BlogArticle() {
@@ -21,7 +21,7 @@ function BlogArticle() {
                     </div>
 
                     <div className="p-10 max-w-lg max-h-lg">
-                        <CloudinaryImage name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-full rounded-lg " />
+                        <CloudinaryImageX name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-full rounded-lg " />
                     </div>
                 
                 </div>

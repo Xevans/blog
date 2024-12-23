@@ -1,10 +1,32 @@
-import ArticlesSidebar from "../../components/articles-sidebar/articles-sidebar";
-import BlogArticle from "../../components/blog-article/blog-article";
+//import ArticlesSidebar from "../../components/articles-sidebar/articles-sidebar";
+//import BlogArticle from "../../components/blog-article/blog-article";
+
+import { useContext, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import { NavContext } from "../../contexts/nav-context/nav-context.contexts";
+import { NavContextType } from "../../types/nav/types.nav";
 
 function Coding() {
 
+    const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
+
+    useEffect(() => {
+        if (current_route !== "coding") {
+            updateRoute("coding");
+        }
+    });
+
+
     return (
         <>
+
+            {/*Renders a list of articles (dont worry about db for now). 
+            Just simulate what would be in a DB*/}
+
+            <Outlet/>
+
+
+            {/*
             <div className="items-center justify-center dark:text-slate-100">
 
                 <div className="flex grid-cols-4 gap-4">
@@ -24,7 +46,7 @@ function Coding() {
                         <ArticlesSidebar />
                     </div>
                 </div>
-            </div>
+            </div>*/}
 
         </>
     )
