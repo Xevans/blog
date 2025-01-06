@@ -5,7 +5,7 @@ function WritingBlogList() {
 
     return (
         <>
-            <div className="ml-auto mr-auto pt-24">
+            <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 h-screen">
 
                 <div className="grid grid-cols-2 gap-10 max-w-3xl ml-auto mr-auto">
                     <div className="dark:text-white font-semibold text-3xl">

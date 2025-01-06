@@ -129,11 +129,11 @@ function Navigation() {
       </DisclosurePanel>
     </Disclosure>
 
-    <div className="bg-white dark:bg-gray-900 z-40">
+    <div className="bg-white dark:bg-gray-900 h-full">
         <div className='mx-6 mt-14'>
             <Outlet />
         </div>
-        <div>
+        <div className='fixed bottom-0 w-screen'>
             <Footer />
         </div>
     </div>

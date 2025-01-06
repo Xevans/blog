@@ -5,7 +5,7 @@ function StoryOverview() {
 
     return (
         <>
-            <div className="items-center justify-center dark:text-slate-100 max-w-5xl ml-auto mr-auto">
+            <div className="items-center justify-center dark:text-slate-100 max-w-5xl ml-auto mr-auto ">
 
                 <div className="flex grid-cols-4 gap-4">
                     <div className="flex flex-col">

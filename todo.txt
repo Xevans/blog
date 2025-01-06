@@ -21,3 +21,9 @@ Do for each category, then start authoring!
 
 12/18
 rename mission class and file to Dev-journey
+
+12/24
+Find out how to make div size of viewport
+
+1/6
+make blog list a horzontal scroll. feel free to use arrows and animations

@@ -57,6 +57,35 @@ function Mission() {
                                     <br />
                                 </div>
 
+                                <div className="max-w-xl">
+                                    <p>
+                                        I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
+                                        not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
+                                        create the next big thing. 
+                                    </p>
+                                    <br />
+                                    <p>
+                                        While there are a lot of talented people I have had the pleasure of meeting and working with, truth is, most 
+                                        engineers are pretty human. They get confused, they get lost in the details, they google questions, just like you and me.
+                                    </p>
+                                    <br />
+                                </div>
+
+
+                                <div className="max-w-xl">
+                                    <p>
+                                        I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
+                                        not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
+                                        create the next big thing. 
+                                    </p>
+                                    <br />
+                                    <p>
+                                        While there are a lot of talented people I have had the pleasure of meeting and working with, truth is, most 
+                                        engineers are pretty human. They get confused, they get lost in the details, they google questions, just like you and me.
+                                    </p>
+                                    <br />
+                                </div>
+
                             </div>
                         </div>
 
