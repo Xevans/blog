@@ -5,6 +5,7 @@ function BlogList() {
     // props = category {Programming}
     return (
         <>
+            <title> Blog List </title>
             <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 h-screen">
 
                 <div className="grid grid-cols-2 gap-10 max-w-4xl ml-auto mr-auto">
@@ -16,7 +17,7 @@ function BlogList() {
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-600">
                         <Link to="mission">
                             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                My Developer Journey.
+                            Creating This Blog.
                             </h5>
 
                             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
@@ -28,7 +29,7 @@ function BlogList() {
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            Creating Local History Archives. My First MERN App.
+                            Creating Local History Archives. Applying Full Stack Topology.
                         </h5>
 
                         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
@@ -38,7 +39,7 @@ function BlogList() {
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            Creating This Blog.
+                            Dabbling Into Game Dev.
                         </h5>
 
                         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
@@ -48,17 +49,17 @@ function BlogList() {
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            Pursuing Game Engine Development.
+                            Pursuing Game Engine Development - Long Term.
                         </h5>
 
                         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
-                            My first time working on a VR game in Unreal Engine 5.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo commodi quas ducimus aut repudiandae ab beatae neque tenetur, ut error odit?
                         </p>
                     </div>
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                            My Favorite Web Technologies.
+                            Favorite Web Technologies.
                         </h5>
 
                         <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">

@@ -5,6 +5,7 @@ function Mission() {
 
     return (
         <>
+            <title> Creating This Blog </title>
             <div className="items-center justify-center dark:text-slate-100 max-w-5xl ml-auto mr-auto">
 
                 <div className="flex grid-cols-4 gap-4">
@@ -17,8 +18,8 @@ function Mission() {
                         </div>
 
                         <div>
-                            <div className=" flex flex-col">
-                                <div className="flex grid-cols-4 gap-4">
+                            <div className="ml-20 max-w-2xl">
+                                <div className="">
                                     <div className="pt-10">
                                         <div>
                                             <h4 className="text-3xl font-semibold"> About Me </h4>
@@ -38,9 +39,11 @@ function Mission() {
                                         </p>
                                     </div>
 
-                                    <div className="p-10 max-w-lg max-h-lg">
-                                        <CloudinaryImageX name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-full rounded-lg " />
-                                    </div>
+                                    
+                                </div>
+
+                                <div className="p-10 max-w-lg max-h-lg">
+                                    <CloudinaryImageX name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-full rounded-lg " />
                                 </div>
 
                                 <div className="max-w-xl">

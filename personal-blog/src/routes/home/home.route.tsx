@@ -12,14 +12,15 @@ function Home() {
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
     useEffect(() => {
-        if (current_route !== "home") {
-            updateRoute("home");
+        if (current_route !== "Home") {
+            updateRoute("Home");
         }
     });
 
 
     return (
         <>
+            <title> Xavier's Blog </title>
             <div>
 
                 <div className="flex items-center justify-center">

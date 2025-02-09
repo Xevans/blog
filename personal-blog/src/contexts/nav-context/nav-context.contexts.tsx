@@ -4,10 +4,10 @@ import { NavContextType } from "../../types/nav/types.nav";
 export const NavContext = createContext<NavContextType | null>(null);
 
 export const NavProvider: FC<{children: ReactNode}> = ({ children }) => {
-    const [current_route, setCurrentRoute] = useState("home");
+    const [current_route, setCurrentRoute] = useState("Home");
 
-    const updateRoute = (route_id: string) => {
-        setCurrentRoute(route_id);
+    const updateRoute = (route_name: string) => {
+        setCurrentRoute(route_name);
     }
 
     // exposed values

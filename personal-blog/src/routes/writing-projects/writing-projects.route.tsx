@@ -8,8 +8,8 @@ function Writing() {
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
     useEffect(() => {
-        if (current_route !== "writing") {
-            updateRoute("writing");
+        if (current_route !== "Writing Projects") {
+            updateRoute("Writing Projects");
         }
     });
 

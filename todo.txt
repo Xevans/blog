@@ -27,3 +27,32 @@ Find out how to make div size of viewport
 
 1/6
 make blog list a horzontal scroll. feel free to use arrows and animations
+
+More category ideas: Life Blog, Game Dev
+
+
+2/9/25
+
+We can do a Nextjs migration once the project is live and being served.
+
+Frontend Technologies: Vite, React, Typescript
+State Management tools: useEffect, Context
+Routing Tools: React-router
+Styling Tools: Tailwind CSS
+
+Tasks:
+
+- Add a logo to the nav bar (done)
+- Change picture on the main page (done)
+- Add context to keep track of where you are via the nav bar indicators. (done)
+    - e.g if I click on a link on the main content and I go to another route, the highlighted nav element should update accordingly.
+    
+- Work on dev blog articles
+- work on writing blog articles
+- Add playground route
+    - I want to try an interactive sound-input app
+    - user clicks a key and a sound is played.
+    - chiptune playing game or tracker type game.
+
+
+

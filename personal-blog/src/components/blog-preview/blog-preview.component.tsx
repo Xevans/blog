@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import CloudinaryImageX from "../cloudinary-image/cloudinary-image.component";
 
 function BlogPreview() {
+
 
     return (
         <>
@@ -12,6 +13,10 @@ function BlogPreview() {
                     </div>
 
                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
+
+
+
+
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
                         <div>
@@ -43,6 +48,10 @@ function BlogPreview() {
                             </div>
                         </div>
 
+
+
+
+
                         <div>
                             <CloudinaryImageX name="awakening-promo-1" width={765} height={526} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
@@ -65,14 +74,17 @@ function BlogPreview() {
                                         <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
                                     </div>
 
-                                    <Link to="writing-projects/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
+                                    <a href="writing-projects/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
                                 </div>
 
                             </div>
                         </div>
 
+
+
+
                         <div>
-                        <CloudinaryImageX name="mern1" width={765} height={526} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
+                            <CloudinaryImageX name="mern1" width={765} height={526} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
                             <div className="mt-8">
                                 <span className="text-blue-500 uppercase">Developer Diary</span>
@@ -98,6 +110,8 @@ function BlogPreview() {
                                 </div>
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </section>

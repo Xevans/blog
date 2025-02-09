@@ -1,5 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel,  } from '@headlessui/react'
-import { useContext, useEffect, useState } from 'react';
+import { useContext} from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Footer from '../../components/footer/footer.component';
 import { NavContext } from '../../contexts/nav-context/nav-context.contexts';
@@ -12,58 +12,43 @@ function Navigation() {
 
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
-    useEffect(() => {
-      updateRoute(current_route);
-    },[current_route, updateRoute]);
+    //const [currentRoute, setCurrentRoute] = useState(current_route);
 
-    const [currentRoute, setCurrentRoute] = useState(current_route);
+    /*useEffect(() => {
+
+      
+    },[current_route, updateRoute]);
+    */
+
+    
 
     const navigation = [
-        { name: 'Home', href: '/', current: checkRoute('home') },
-        { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('coding') },
-        { name: 'Writing Projects', href: '/writing-projects', current: checkRoute('writing') },
-        { name: 'Hobby Blog', href: '/hobbies', current: checkRoute('hobbies') },
+        { name: 'Home', href: '/', current: checkRoute('Home') },
+        { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('Coding Projects') },
+        { name: 'Writing Projects', href: '/writing-projects', current: checkRoute('Writing Projects') },
+        { name: 'Hobby Blog', href: '/hobbies', current: checkRoute('Hobby Blog') },
     ]
     
     function checkRoute(name: string) {
-        if (currentRoute === name) {
+        if (current_route === name) {
             return true;
         } else {
             return false;
         }
+    }
+
+
+    function handleClick(route:string) {
+      console.log("here");
+      updateRoute(route);
     }
     
     function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
     }
 
-    useEffect(() => {
-    }, [currentRoute])
 
-    function handleClick(name: string) {
-        switch (name) {
-            case 'Home':
-                setCurrentRoute('home')
-                break;
-            
-            case 'Coding Projects':
-                setCurrentRoute('coding')
-                break;
 
-            case 'Writing Projects':
-                setCurrentRoute('writing')
-                break;
-
-            case 'Hobby Blog':
-                setCurrentRoute('hobbies')
-                break;
-        
-            default:
-                break;
-        }
-    }
-
-    
 
   return (
     <>
@@ -78,13 +63,16 @@ function Navigation() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
-            </div>
+            <Link to="/">
+              <div className="flex flex-shrink-0 items-center">
+                <img
+                  alt="Xavier E."
+                  src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/monitor-512"
+                  className="h-8 w-auto"
+                />
+                <h4 className='ml-1 font-bold text-2xl text-slate-300'>Xavier's Blog</h4>
+              </div>
+            </Link>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (

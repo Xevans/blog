@@ -11,8 +11,8 @@ function Coding() {
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
     useEffect(() => {
-        if (current_route !== "coding") {
-            updateRoute("coding");
+        if (current_route !== "Coding Projects") {
+            updateRoute("Coding Projects");
         }
     });
 
