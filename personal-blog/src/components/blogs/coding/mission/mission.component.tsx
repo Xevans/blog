@@ -27,7 +27,7 @@ function Mission() {
                                     <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">cottonbro studio | Pexels.com</div>
                                 </article>
 
-                                <div className="ml-20 max-w-2xl">
+                                <div className="lg:ml-20 max-w-4xl text-lg pb-10">
                                     <div className="">
                                         <div className="pt-10">
                                             <div>
@@ -51,11 +51,11 @@ function Mission() {
                                         
                                     </div>
 
-                                    <div className="p-10 max-w-lg max-h-lg">
+                                    <div className="p-10 max-w-lg max-h-lg mx-auto">
                                         <CloudinaryImageX name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-full rounded-lg " />
                                     </div>
 
-                                    <div className="max-w-xl">
+                                    <div>
                                         <p>
                                             I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
                                             not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
@@ -69,7 +69,7 @@ function Mission() {
                                         <br />
                                     </div>
 
-                                    <div className="max-w-xl">
+                                    <div>
                                         <p>
                                             I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
                                             not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
@@ -84,7 +84,7 @@ function Mission() {
                                     </div>
 
 
-                                    <div className="max-w-xl">
+                                    <div>
                                         <p>
                                             I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
                                             not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
@@ -98,6 +98,10 @@ function Mission() {
                                         <br />
                                     </div>
 
+                                </div>
+
+                                <div className="lg:ml-20 mb-28">
+                                    <h4 className="font-bold text-2xl">Thanks for reading!</h4>
                                 </div>
 
                             </div>

@@ -25,7 +25,7 @@ function StoryOverview() {
                                     <h3 className="z-10 mt-3 text-3xl font-bold text-white">The Dream Gate</h3>
                                     <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">Art by @Kaiserlaser</div>
                                 </article>
-                                <div className="ml-20 flex max-w-2xl">
+                                <div className="lg:ml-20 flex max-w-3xl pb-10">
                                     <div className="pt-10">
                                         <div>
                                             <h4 className="text-3xl font-semibold"> What is Awakening?</h4>
@@ -38,6 +38,10 @@ function StoryOverview() {
                                     </div>
 
                                     
+                                </div>
+
+                                <div className="lg:ml-20 mb-28">
+                                    <h4 className="font-bold text-2xl">Thanks for reading!</h4>
                                 </div>
                             </div>
                         </div>
