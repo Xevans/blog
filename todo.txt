@@ -46,7 +46,12 @@ Tasks:
 - Change picture on the main page (done)
 - Add context to keep track of where you are via the nav bar indicators. (done)
     - e.g if I click on a link on the main content and I go to another route, the highlighted nav element should update accordingly.
-    
+
+- Make mobile view nav button work (looking into headless ui's disclosure button) https://headlessui.com/react/disclosure (done)
+- Add linkedin button on footer
+- 
+
+
 - Work on dev blog articles
 - work on writing blog articles
 - Add playground route

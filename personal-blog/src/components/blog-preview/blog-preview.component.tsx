@@ -1,4 +1,4 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CloudinaryImageX from "../cloudinary-image/cloudinary-image.component";
 
 function BlogPreview() {
@@ -74,7 +74,7 @@ function BlogPreview() {
                                         <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
                                     </div>
 
-                                    <a href="writing-projects/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+                                    <Link to="writing-projects/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
                                 </div>
 
                             </div>

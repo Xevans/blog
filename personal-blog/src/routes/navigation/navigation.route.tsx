@@ -1,9 +1,44 @@
-import { Disclosure, DisclosureButton, DisclosurePanel,  } from '@headlessui/react'
-import { useContext} from 'react';
+import { Disclosure, DisclosureButton, /*DisclosureButtonProps,*/ DisclosurePanel,  } from '@headlessui/react'
+import { useContext, useEffect, forwardRef, /*ForwardedRef,*/ /*HTMLProps*/} from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import Footer from '../../components/footer/footer.component';
 import { NavContext } from '../../contexts/nav-context/nav-context.contexts';
 import { NavContextType } from '../../types/nav/types.nav';
+
+type Props = object; // same as Props = {} empty object
+
+// Hamburger menu button needs to be forwarded like so using forwardRef
+const HamburgerButton = forwardRef<HTMLButtonElement, Props>((props, ref) => (
+    <button type="button" ref={ref} {...props}>
+        <div className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18L20 18" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 12L20 12" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 6L20 6" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </button>
+));
+
+
+/*const HamburgerMenu = forwardRef(function (props, ref: null | null = null) {
+
+    return (
+        <>
+            <div className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            ref={ref} {...props}
+            >
+                <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4 12L20 12" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4 6L20 6" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </>
+    );
+
+});*/
+
 
 
 
@@ -14,14 +49,15 @@ function Navigation() {
 
     //const [currentRoute, setCurrentRoute] = useState(current_route);
 
-    /*useEffect(() => {
+    useEffect(() => {
 
+      window.scrollTo(0, 0); // Link does not scroll to top of screen when rerendering. So do so manually when the rouch changes.
       
     },[current_route, updateRoute]);
-    */
-
     
 
+    
+    // Navigation: array of json objects.
     const navigation = [
         { name: 'Home', href: '/', current: checkRoute('Home') },
         { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('Coding Projects') },
@@ -39,7 +75,6 @@ function Navigation() {
 
 
     function handleClick(route:string) {
-      console.log("here");
       updateRoute(route);
     }
     
@@ -48,21 +83,22 @@ function Navigation() {
     }
 
 
-
+{/* className="group relative inline-flex items-center justify-center rounded-md p-3 bg-slate-400 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" */}
 
   return (
     <>
     <Disclosure as="nav" className="bg-gray-800 fixed top-0 left-0 right-0 z-10">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 left-0 flex items-center md:hidden ">
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton as={HamburgerButton}>
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
+              
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <Link to="/">
               <div className="flex flex-shrink-0 items-center">
                 <img
@@ -70,10 +106,10 @@ function Navigation() {
                   src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/monitor-512"
                   className="h-8 w-auto"
                 />
-                <h4 className='ml-1 font-bold text-2xl text-slate-300'>Xavier's Blog</h4>
+                <h4 className='ml-1 font-bold text-2xl text-blue-300'>Xavier's Blog</h4>
               </div>
             </Link>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <Link onClick={() => handleClick(item.name)}
@@ -95,15 +131,15 @@ function Navigation() {
       </div>
 
 
-      {/*Mobile ver? */}
+      {/*Disclosure only rendered in mobile view even if triggered in Disclosure button */}
 
-      <DisclosurePanel className="sm:hidden">
+      <DisclosurePanel transition className="md:hidden origin-top transition duration-100 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as="a"
-              href={item.href}
+              as={Link}
+              to={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',

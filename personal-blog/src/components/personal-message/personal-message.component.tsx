@@ -25,9 +25,11 @@ function PersonalMessage() {
                         Software Engineer, Tinkerer, Writer
                         </div>
                     </figcaption>
-                    <button className="mt-10 transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white font-bold py-2 px-4 rounded">
-                        Resume
-                    </button>
+                    <a href="https://drive.google.com/file/d/1eRZnncjIhtaPURbU1J_rrEBJIA1aeQqE/view?usp=sharing" target="_blank">
+                        <button className="mt-10 transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white font-bold py-2 px-4 rounded">
+                            Resume
+                        </button>
+                    </a>
                 </div>
             </figure>
             </div>
