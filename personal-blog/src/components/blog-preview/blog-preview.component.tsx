@@ -6,7 +6,7 @@ function BlogPreview() {
 
     return (
         <>
-            <section className="bg-white dark:bg-slate-900 px-6 py-10 mx-auto ">
+            <section className="bg-white dark:bg-slate-900 px-6 py-10 mx-auto mb-10">
                 <div className="container px-6 py-10 mx-auto">
                     <div className="flex items-center justify-between">
                         <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Featured Blogs</h1>

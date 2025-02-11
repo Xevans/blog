@@ -6,7 +6,7 @@ function BlogList() {
     return (
         <>
             <title> Blog List </title>
-            <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 h-screen">
+            <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 min-h-screen">
 
                 <div className="grid grid-cols-2 gap-10 max-w-4xl ml-auto mr-auto">
                     <div className="dark:text-white font-semibold text-3xl">
