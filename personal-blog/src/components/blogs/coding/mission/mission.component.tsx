@@ -12,9 +12,9 @@ function Mission() {
                     <div className="flex flex-col">
                         <div className="dark:bg-slate-700 p-16 mt-8 rounded-md">
                             <h4 className="text-xl">Projects / Coding</h4>
-                            <h2 className="text-3xl">Developer Journey</h2>
+                            <h2 className="text-3xl">Creating This Blog</h2>
 
-                            <p className="pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus, enim ipsam earum doloribus in exercitationem laboriosam deserunt, cupiditate ullam illum vitae repellat optio eos dicta quo distinctio non accusamus.</p>
+                            <p className="pt-8">Covering the reason behind creating this blog, technologies used, some challenges, rant, my spritual Typescript conversion and a kickoff message to commemorat the first entry!</p>
                         </div>
 
                         <div>
