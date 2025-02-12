@@ -34,17 +34,17 @@ function Mission() {
                                             <h4 className="text-4xl font-semibold pb-5"> Overview </h4>
                                             
                                             <p> I built this blog to <b>challenge myself to build a website using typescript. </b> 
-                                                In my last project I worked strictly with untyped javascript which invited a lot of headaches down the read. 
+                                                In my last project I worked strictly with untyped javascript which invited a lot of headaches down the road. 
                                                 Now I can look at a module I wrote an know exactly what data it's operating on. 
-                                                To put it short, revisiting my old projects makes me want to stop time and ascend them to type script, haha.
+                                                To put it short, revisiting my old projects makes me want to stop time and ascend them to Typescript, haha.
                                             </p>
                                             <br />
 
-                                            <h5 className="text-3xl font-semibold pb-5"> My Personal Blog </h5>
+                                            <h5 className="text-3xl font-semibold pb-5"> My Personal Blog &#128187;</h5>
                                             <p> For the most part, this blog exists solely for me to talk about my interests in detail. 
-                                                It coulg be anything and I am still planning out categories like a general discussion, and gaming. 
-                                                For now, I am focusing on topics closer to my career as I am in a pivotal point and wish to show prospective employers or even fellow devs my own challenges and how I overcame them. 
-                                                I also share unprofessional opinions, but that just comes with the territory. 
+                                                It could be anything and I am still planning out different categories like a general discussion, and gaming. 
+                                                <br /><br />For now, I am focusing on topics closer to my career as I am in a pivotal point and wish to show prospective employers and even fellow devs my own challenges and how I overcame them. 
+                                                <br /><br />I also share unprofessional opinions, but that just comes with the territory. 
                                                 I will also be featuring my writing as I am a proud novelist and hope to share more to the world about it!
                                             </p>  
                                             <br />
@@ -77,15 +77,15 @@ function Mission() {
                                         <br />
 
                                         <p>
-                                        In my last project I decided to go full stack because a database needed to be utilized by the front-end, which can be done without a backend (see my crown clothing project using firebase). 
-                                        That site needed to have thousands of records preprocessed when rendering them to the browser, so creating a backend server with API endpoints to handle these niche requests seemed like the best course of action, and sure enough, it kept my front end logic nice and tidey. 
+                                        In my last project I decided to go full stack because a database needed to be utilized by the front-end, which can be done without a backend (<a className="transition duration-500 font-semibold text-blue-300 hover:text-blue-400 hover:underline" href="https://github.com/Xevans/crown-clothing" target="_blank">see my crown clothing project using firebase</a>). 
+                                        <br /><br />That site needed to have thousands of records preprocessed when rendering them to the browser, so creating a backend server with API endpoints to handle these niche requests seemed like the best course of action, and sure enough, it kept my front end logic nice and tidey. 
                                         </p>
                                         <br />
 
                                         <p>
                                         Now the blog, I wanted to work with typescript sooner rather than later, and tailwind was also something I wanted to explore and oh boy am I never going back. 
                                         The mild learning curve was worth it. 
-                                        I am no stranger to strict languages, as someone with a heavy C++ background, but something Typescript has over C++ (besides being easier to dive into) is having a helpful parser. 
+                                        <br /><br />I am no stranger to strict languages, as someone with a heavy C++ background, but something Typescript has over C++ (besides being easier to dive into) is having a helpful parser. 
                                         </p>
                                         <br />
 
@@ -114,8 +114,8 @@ function Mission() {
                                         </p>
                                         <br />
                                         <p>
-                                            Secondly I want to add demonstrations to the website in the future. 
-                                            I already cooked up an idea for an interactive chiptune player, that plays different tunes according to keyboard presses. 
+                                            Next, I want to add demonstrations to the website in the future. 
+                                            I already cooked up an idea for an interactive chiptune player that plays different tunes according to keyboard presses. 
                                             From there I could make a mini tracker that users can play with. More to come.
                                         </p>
                                         <br />
@@ -123,8 +123,9 @@ function Mission() {
 
 
                                     <div>
+                                    <h5 className="text-2xl font-semibold pb-5"> Afterword: Blog Kickoff &#127881;</h5>
                                         <p>
-                                            I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
+                                            I have a firm belief that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
                                             not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
                                             create the next big thing. 
                                         </p>
