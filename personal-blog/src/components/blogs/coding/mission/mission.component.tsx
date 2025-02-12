@@ -30,16 +30,22 @@ function Mission() {
                                 <div className="lg:ml-20 max-w-4xl text-lg pb-10">
                                     <div className="">
                                         <div className="pt-10">
-                                            <div>
-                                                <h4 className="text-3xl font-semibold"> About Me </h4>
-                                            </div>
-                                            <p>About me? Yeah you read that right! Normally, an about me would be its own topic, but I would rather
-                                                define myself for each passion I carry. As a Software Engineer, I am a life-long learner and a creative problem solver.
-                                                I'm attracted to unique problems and will do all that I can to learn about unfamiliar concepts.
+                                            
+                                            <h4 className="text-4xl font-semibold pb-5"> Overview </h4>
+                                            
+                                            <p> I built this blog to <b>challenge myself to build a website using typescript. </b> 
+                                                In my last project I worked strictly with untyped javascript which invited a lot of headaches down the read. 
+                                                Now I can look at a module I wrote an know exactly what data it's operating on. 
+                                                To put it short, revisiting my old projects makes me want to stop time and ascend them to type script, haha.
                                             </p>
                                             <br />
-                                            <p> When a question comes up, I generally don't entertain the phrase 'who knows'. It's perfectly fine to not know something, afterall.
-                                                Unfortunately, its a favorite default I hear often. This is where I would typically say, so let's find out! So why am I bringing this up?
+
+                                            <h5 className="text-3xl font-semibold pb-5"> My Personal Blog </h5>
+                                            <p> For the most part, this blog exists solely for me to talk about my interests in detail. 
+                                                It coulg be anything and I am still planning out categories like a general discussion, and gaming. 
+                                                For now, I am focusing on topics closer to my career as I am in a pivotal point and wish to show prospective employers or even fellow devs my own challenges and how I overcame them. 
+                                                I also share unprofessional opinions, but that just comes with the territory. 
+                                                I will also be featuring my writing as I am a proud novelist and hope to share more to the world about it!
                                             </p>  
                                             <br />
                                             
@@ -56,29 +62,61 @@ function Mission() {
                                     </div>
 
                                     <div>
+                                        <h5 className="text-3xl font-semibold pb-5"> Tech Stack (Incoming story + transformative experience) </h5>
+                                        
                                         <p>
-                                            I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
-                                            not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
-                                            create the next big thing. 
+                                            React (Vite) + Typescript + TailwindCSS
                                         </p>
                                         <br />
+                                        
                                         <p>
-                                            While there are a lot of talented people I have had the pleasure of meeting and working with, truth is, most 
-                                            engineers are pretty human. They get confused, they get lost in the details, they google questions, just like you and me.
+                                        There was no scientific analysis that went into this stack, so I'll give a story instead. 
+                                        Early last year, I dived into react and built something as homework from a course. 
+                                        I already had some experience developing and working with backend technologies like .NET, Express, and Django for several projects. 
+                                        </p>
+                                        <br />
+
+                                        <p>
+                                        In my last project I decided to go full stack because a database needed to be utilized by the front-end, which can be done without a backend (see my crown clothing project using firebase). 
+                                        That site needed to have thousands of records preprocessed when rendering them to the browser, so creating a backend server with API endpoints to handle these niche requests seemed like the best course of action, and sure enough, it kept my front end logic nice and tidey. 
+                                        </p>
+                                        <br />
+
+                                        <p>
+                                        Now the blog, I wanted to work with typescript sooner rather than later, and tailwind was also something I wanted to explore and oh boy am I never going back. 
+                                        The mild learning curve was worth it. 
+                                        I am no stranger to strict languages, as someone with a heavy C++ background, but something Typescript has over C++ (besides being easier to dive into) is having a helpful parser. 
+                                        </p>
+                                        <br />
+
+                                        <p>
+                                        Typescript feels like a coach calling out your bad habits in your ear while you work. 
+                                        It took me a few hours to write a simple context and frankly, typing my objects and data showed me how little I understood what some of my hooks were actually doing.
                                         </p>
                                         <br />
                                     </div>
 
+                                    <div className="p-10 max-w-lg max-h-lg mx-auto">
+                                        <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/v1739318928/blog-pics/cat-computer-gif.gif" />
+                                    </div>
+
                                     <div>
+                                        <h5 className="text-3xl font-semibold pb-5"> Future Considerations </h5>
                                         <p>
-                                            I have a firm believe that anything can be learned if you are willing. Sounds pretty lofty, right? Realistically, the world is full of
-                                            not only barriers to information, but discouragement as well. There is this stigma that engineers are math-wizards that use black magic to
-                                            create the next big thing. 
+                                            I want to migrate this project into a Nextjs project. 
+                                            This project is a blog for the most part. 
+                                            There isn't much need to limit it to a SPA when it's not really operating like an app (although I tried to make it feel like one). 
+                                            Sure there might not be crazy performance advantages in this stage, but...
+                                            <br/> 
+                                            <br/><b>1.)</b> It's an excuse to learn static rendering. 
+                                            <br/><b>2.)</b> Static rendering would be useful for blog content which will have low client-side interactivity. 
+                                            <br/><b>3.)</b> I just like learning about things as I implement them. 
                                         </p>
                                         <br />
                                         <p>
-                                            While there are a lot of talented people I have had the pleasure of meeting and working with, truth is, most 
-                                            engineers are pretty human. They get confused, they get lost in the details, they google questions, just like you and me.
+                                            Secondly I want to add demonstrations to the website in the future. 
+                                            I already cooked up an idea for an interactive chiptune player, that plays different tunes according to keyboard presses. 
+                                            From there I could make a mini tracker that users can play with. More to come.
                                         </p>
                                         <br />
                                     </div>
