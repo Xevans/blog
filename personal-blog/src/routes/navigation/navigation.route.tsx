@@ -60,9 +60,9 @@ function Navigation() {
     // Navigation: array of json objects.
     const navigation = [
         { name: 'Home', href: '/', current: checkRoute('Home') },
+        { name: 'Dev Blog', href: '/dev-blogs', current: checkRoute('Dev Blog') },
+        { name: 'Writing Blog', href: '/writing-blogs', current: checkRoute('Writing Blog') },
         { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('Coding Projects') },
-        { name: 'Writing Projects', href: '/writing-projects', current: checkRoute('Writing Projects') },
-        { name: 'Hobby Blog', href: '/hobbies', current: checkRoute('Hobby Blog') },
     ]
     
     function checkRoute(name: string) {

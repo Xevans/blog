@@ -74,7 +74,7 @@ function BlogPreview() {
                                         <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
                                     </div>
 
-                                    <Link to="writing-projects/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
+                                    <Link to="writing-blogs/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
                                 </div>
 
                             </div>

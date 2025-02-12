@@ -8,8 +8,9 @@ function Writing() {
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
     useEffect(() => {
-        if (current_route !== "Writing Projects") {
-            updateRoute("Writing Projects");
+        // ensure nav context is correct even if route is visited from external source
+        if (current_route !== "Writing Blog") {
+            updateRoute("Writing Blog");
         }
     });
 

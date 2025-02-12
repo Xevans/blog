@@ -11,8 +11,9 @@ function Coding() {
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
 
     useEffect(() => {
-        if (current_route !== "Coding Projects") {
-            updateRoute("Coding Projects");
+        // ensure nav context is correct even if route is visited from external source
+        if (current_route !== "Dev Blog") {
+            updateRoute("Dev Blog");
         }
     });
 
