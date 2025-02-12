@@ -33,10 +33,10 @@ function Mission() {
                                             
                                             <h4 className="text-4xl font-semibold pb-5"> Overview </h4>
                                             
-                                            <p> I built this blog to <b>challenge myself to build a website using typescript. </b> 
+                                            <p> I built this blog to <b>challenge myself to build a website using Typescript. </b> 
                                                 In my last project I worked strictly with untyped javascript which invited a lot of headaches down the road. 
                                                 Now I can look at a module I wrote an know exactly what data it's operating on. 
-                                                To put it short, revisiting my old projects makes me want to stop time and ascend them to Typescript, haha.
+                                                <br /><br />To put it short, revisiting my old projects makes me want to stop time and ascend them to Typescript, haha.
                                             </p>
                                             <br />
 
@@ -132,7 +132,7 @@ function Mission() {
                                         <br />
                                         <p>
                                             While there are a lot of talented people I have had the pleasure of meeting and working with, truth is, most 
-                                            engineers are pretty human. They get confused, they get lost in the details, they google questions, just like you and me.
+                                            engineers are pretty human. They get confused, they get lost in the details, they research questions, just like you and me.
                                         </p>
                                         <br />
                                     </div>
