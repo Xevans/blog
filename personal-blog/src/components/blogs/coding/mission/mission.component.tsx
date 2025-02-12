@@ -14,7 +14,7 @@ function Mission() {
                             <h4 className="text-xl">Projects / Coding</h4>
                             <h2 className="text-3xl">Creating This Blog</h2>
 
-                            <p className="pt-8">Covering the reason behind creating this blog, technologies used, some challenges, rant, my spritual Typescript conversion and a kickoff message to commemorat the first entry!</p>
+                            <p className="pt-8">Covering the reason behind creating this blog, technologies used, some challenges, rant, my spritual Typescript conversion and a kickoff message to commemorate the first entry!</p>
                         </div>
 
                         <div>

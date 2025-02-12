@@ -21,7 +21,7 @@ function BlogList() {
                             </h5>
 
                             <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo commodi quas ducimus aut repudiandae ab beatae neque tenetur, ut error odit?
+                            Covering the reason behind creating this blog, technologies used, some challenges, rant, my spritual Typescript conversion and a kickoff message to commemorate the first entry!
                             </p>
                         </Link>
                         
