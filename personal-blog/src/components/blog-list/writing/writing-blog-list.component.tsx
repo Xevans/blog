@@ -5,7 +5,7 @@ function WritingBlogList() {
 
     return (
         <>
-            <title> Blog List </title>
+            <title> Writing Blogs </title>
             <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 min-h-screen">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl ml-auto mr-auto pb-32">
@@ -14,7 +14,7 @@ function WritingBlogList() {
                     </div>
                     <div></div>
 
-                    <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-600">
+                    <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:dark:bg-gray-600 hover:bg-gray-400">
                         <Link to="story-overview">
                             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                                 Get to know my story: Awakening!
