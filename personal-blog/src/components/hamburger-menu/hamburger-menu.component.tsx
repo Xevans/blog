@@ -1,7 +1,7 @@
 
 
 
-function HamburgerMenu() {
+export const ham = () => {
 
     return (
         <>
@@ -16,5 +16,3 @@ function HamburgerMenu() {
     );
 
 };
-
-export default HamburgerMenu
