@@ -60,4 +60,19 @@ Tasks:
     - chiptune playing game or tracker type game.
 
 
+Firebase data fetch design:
+    - want to put the firebase call in a top level context that inits iteself with the blog data.
+        - do we need to retain entire objects?
+        - No. Example: could only retrieve title, blurb, category, date, tags
+            - This would be enough to populate cards and previews.
+            - When a specific blog is requested, we can update the context for the current blog
+            - this will fetch the complete object for the particular blog.
+            - Now the problem. How do I send a link to a specific article? This is all just DOM manipulation so far.
+                - See Q/A for adding params to routes: https://stackoverflow.com/questions/75491261/how-can-i-dynamically-create-a-route-in-react
+                    (dynamically create routes using ID's that corespond with some obj to be retrieved.)
+
+        
+            
+
+
 
