@@ -13,6 +13,7 @@ import BlogList from './components/blog-list/coding/blog-list.component'
 import WritingBlogList from './components/blog-list/writing/writing-blog-list.component'
 import StoryOverview from './components/blogs/writing/story-overview.component'
 import NavProvider from './contexts/nav-context/nav-context.contexts'
+import CodeProjectList from './components/blog-list/coding-projects/code-project-list'
 
 function App() {
   // use an empty tag instead of fragment in vite/typescript <> </>
@@ -40,7 +41,10 @@ function App() {
             <Route path='story-overview' element={<StoryOverview/>} />
           </Route>
           
-          <Route path='coding-projects/' element={<CodingProjects/>} />
+          <Route path='coding-projects/' element={<CodingProjects/>}>
+            {/*Coding Projects */}
+            <Route index element={<CodeProjectList/>} />
+          </Route>
         </Route>
         
 
