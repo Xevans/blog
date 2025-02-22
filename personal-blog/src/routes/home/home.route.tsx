@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import BlogPreview from "../../components/blog-preview/blog-preview.component";
+import FeaturedBlogPreview from "../../components/featured-blog-preview/featured-blogs.component";
 import HomeBanner from "../../components/home-banner/home-banner.component";
 import PersonalMessage from "../../components/personal-message/personal-message.component";
 import { NavContext } from "../../contexts/nav-context/nav-context.contexts";
@@ -58,7 +58,7 @@ function Home() {
                 </div>
                 
                 <div>
-                    <BlogPreview />
+                    <FeaturedBlogPreview />
                 </div>
 
             </div>

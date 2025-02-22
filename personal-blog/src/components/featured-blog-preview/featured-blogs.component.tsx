@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BlogPreviewStorageType } from "../../types/firestore/blog-preview/blog-preview.type";
+import { FeaturedBlogStorageType } from "../../types/firestore/featured-blog/featured-blog.type";
 import { getPreviews } from "../../utils/firebase-conn.util";
 //import { MenuItem } from "@headlessui/react";
 
-function BlogPreview() {
+function FeaturedBlogPreview() {
 
-    const [ previews, setPreviews ] = useState<BlogPreviewStorageType[]>([]);
+    const [ previews, setPreviews ] = useState<FeaturedBlogStorageType[]>([]); // Array of Blog Previews 
 
     const fetchPreviews = async() => {
         const data = await getPreviews("featured-blogs"); // this line drove me crazy. needed await
@@ -15,12 +15,13 @@ function BlogPreview() {
         }
     }
 
+    // on mount, fetch the featured blogs and load them into state
     useEffect(() => {
         fetchPreviews();
     },[]);
 
-    console.log(previews)
 
+    // render each state object to the screen
     return (
         <>
             <section className="bg-white dark:bg-slate-900 px-6 py-10 mx-auto mb-10">
@@ -30,10 +31,6 @@ function BlogPreview() {
                     </div>
 
                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
-
-
-
-
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
 
@@ -146,4 +143,4 @@ function BlogPreview() {
     )
 }
 
-export default BlogPreview;
+export default FeaturedBlogPreview;

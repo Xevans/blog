@@ -1,5 +1,5 @@
 
-export type BlogPreviewStorageType = {
+export type FeaturedBlogStorageType = {
     "author": string,
     "date": string,
     "tag": string,

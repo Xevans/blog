@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore";
 import { BlogStorageType } from "../types/firestore/blog/types.blog";
-import { BlogPreviewStorageType } from "../types/firestore/blog-preview/blog-preview.type";
+import { FeaturedBlogStorageType } from "../types/firestore/featured-blog/featured-blog.type";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -59,7 +59,7 @@ export const getBlogs = async(collectionName: string) => {
 export const getPreviews = async(collectionName: string) => {
   try {
     const blogSnapshot = await getDocs(collection(db, collectionName));
-    const previews: BlogPreviewStorageType[] = [];
+    const previews: FeaturedBlogStorageType[] = [];
     blogSnapshot.forEach((doc) => {
       //console.log(`${doc.id} => ${doc.data()}`);
       const { Author, Date, Tag, highlight, linkto, media, title } = doc.data();
@@ -71,7 +71,7 @@ export const getPreviews = async(collectionName: string) => {
       console.log(media);
       console.log(title);*/
 
-      const preview: BlogPreviewStorageType = {
+      const preview: FeaturedBlogStorageType = {
         "author": Author,
         "date": Date,
         "tag": Tag,
