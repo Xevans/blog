@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore";
 import { BlogStorageType } from "../types/firestore/blog/types.blog";
+import { BlogPreviewStorageType } from "../types/firestore/blog-preview/blog-preview.type";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -49,6 +50,40 @@ export const getBlogs = async(collectionName: string) => {
       console.log(media_caption);
       console.log(media_links);
     });
+  } catch (e) {
+    console.error("Error retrieving data: ", e);
+  }
+}
+
+
+export const getPreviews = async(collectionName: string) => {
+  try {
+    const blogSnapshot = await getDocs(collection(db, collectionName));
+    const previews: BlogPreviewStorageType[] = [];
+    blogSnapshot.forEach((doc) => {
+      //console.log(`${doc.id} => ${doc.data()}`);
+      const { Author, Date, Tag, highlight, linkto, media, title } = doc.data();
+      /*console.log(Author);
+      console.log(Date);
+      console.log(Tag);
+      console.log(highlight); // should be tags fix in firebase and add content field
+      console.log(linkto);
+      console.log(media);
+      console.log(title);*/
+
+      const preview: BlogPreviewStorageType = {
+        "author": Author,
+        "date": Date,
+        "tag": Tag,
+        "highlight": highlight, 
+        "linkto": linkto,
+        "media": media,
+        "title": title,
+      }
+
+      previews.push(preview);
+    });
+    return previews;
   } catch (e) {
     console.error("Error retrieving data: ", e);
   }

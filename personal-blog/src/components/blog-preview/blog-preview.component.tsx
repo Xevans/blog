@@ -1,8 +1,25 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CloudinaryImageX from "../cloudinary-image/cloudinary-image.component";
+import { BlogPreviewStorageType } from "../../types/firestore/blog-preview/blog-preview.type";
+import { getPreviews } from "../../utils/firebase-conn.util";
+//import { MenuItem } from "@headlessui/react";
 
 function BlogPreview() {
 
+    const [ previews, setPreviews ] = useState<BlogPreviewStorageType[]>([]);
+
+    const fetchPreviews = async() => {
+        const data = await getPreviews("featured-blogs"); // this line drove me crazy. needed await
+        if (data) { 
+            setPreviews(data);
+        }
+    }
+
+    useEffect(() => {
+        fetchPreviews();
+    },[]);
+
+    console.log(previews)
 
     return (
         <>
@@ -19,41 +36,51 @@ function BlogPreview() {
 
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-                        <div>
-                            <CloudinaryImageX name="dev-image-1" width={1470} height={1470} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
-                            <div className="mt-8">
-                                <span className="text-blue-500 uppercase">Software Development</span>
+                        {
+                            previews.length > 0  &&
 
-                                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                                    How I'm tackling my life-long mission of using data to help people feel inspired and empowered.
-                                </h1>
+                            previews.map((item, key) => {
+                                return (
+                                    <div key={key}>
+                                        <img src={item.media}  className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
-                                <p className="mt-2 text-gray-500 dark:text-gray-400">
-                                    My most recent project I designed with researchers in mind to discover history from the Grosse Pointe and Detroit community over the last 100+ years.
-                                </p>
+                                        <div className="mt-8">
+                                            <span className="text-blue-500 uppercase">{item.tag}</span>
 
-                                <div className="flex items-center justify-between mt-4">
-                                    <div>
-                                        <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
-                                            Xavier E.
-                                        </a>
+                                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                                                {item.title}
+                                            </h1>
 
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
+                                            <p className="mt-2 text-gray-500 dark:text-gray-400">
+                                                {item.highlight}
+                                            </p>
+
+                                            <div className="flex items-center justify-between mt-4">
+                                                <div>
+                                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                                        {item.author}
+                                                    </a>
+
+                                                    <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
+                                                </div>
+
+                                                <Link to={item.linkto} className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
+                                            </div>
+
+                                        </div>
                                     </div>
-
-                                    <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
-                                </div>
-
-                            </div>
-                        </div>
+                                )
+                            })
+                        }
+                        
 
 
 
 
-
+                        {/*
                         <div>
-                            <CloudinaryImageX name="awakening-promo-1" width={765} height={526} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
+                            <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/awakening-promo-1" className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
                             <div className="mt-8">
                                 <span className="text-blue-500 uppercase">Fiction Writing</span>
@@ -84,7 +111,7 @@ function BlogPreview() {
 
 
                         <div>
-                            <CloudinaryImageX name="mern1" width={765} height={526} definitions="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
+                            <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/mern1" className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
                             <div className="mt-8">
                                 <span className="text-blue-500 uppercase">Developer Diary</span>
@@ -106,10 +133,10 @@ function BlogPreview() {
                                         <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
                                     </div>
 
-                                    <a href="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+                                    <Link to="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         
                     </div>

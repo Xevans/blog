@@ -4,7 +4,7 @@ import HomeBanner from "../../components/home-banner/home-banner.component";
 import PersonalMessage from "../../components/personal-message/personal-message.component";
 import { NavContext } from "../../contexts/nav-context/nav-context.contexts";
 import { NavContextType } from "../../types/nav/types.nav";
-import { getBlogs } from "../../utils/firebase-conn.util";
+//import { getBlogs } from "../../utils/firebase-conn.util";
 //import { BlogStorageType } from "../../types/firestore/blog/types.blog";
 
 function Home() {
@@ -30,16 +30,16 @@ function Home() {
         uploadBlog("blogs", file);
     }*/
 
-    const readBlogs = async () => {
-        getBlogs("coding");
-    }
+    /*const readBlogs = async () => {
+        getBlogs("featured-blogs");
+    }*/
 
     useEffect(() => {
         if (current_route !== "Home") {
             updateRoute("Home");
         }
 
-        readBlogs();
+        //readBlogs();
         
     });
 
