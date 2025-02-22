@@ -7,6 +7,7 @@ import { getPreviews } from "../../utils/firebase-conn.util";
 function FeaturedBlogPreview() {
 
     const [ previews, setPreviews ] = useState<FeaturedBlogStorageType[]>([]); // Array of Blog Previews 
+    const [ isVisible, setIsVisible ] = useState(false);
 
     const fetchPreviews = async() => {
         const data = await getPreviews("featured-blogs"); // this line drove me crazy. needed await
@@ -17,22 +18,29 @@ function FeaturedBlogPreview() {
 
     // on mount, fetch the featured blogs and load them into state
     useEffect(() => {
-        fetchPreviews();
+        try {
+            fetchPreviews();
+            setIsVisible(true);
+        } catch (e) {
+            setIsVisible(false);
+            console.log(e);
+        }
+        
     },[]);
 
 
     // render each state object to the screen
     return (
         <>
-            <section className="bg-white dark:bg-slate-900 px-6 py-10 mx-auto mb-10">
-                <div className="container px-6 py-10 mx-auto">
+            <section className="px-6 py-10 mx-auto mb-10">
+                <div className="container px-6 py-10 mx-auto ">
                     <div className="flex items-center justify-between">
                         <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Featured Blogs</h1>
                     </div>
 
                     <hr className="my-8 border-gray-200 dark:border-gray-700" />
 
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+                    <div className={`grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
 
                         {
                             previews.length > 0  &&

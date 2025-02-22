@@ -47,7 +47,7 @@ function Home() {
     return (
         <>
             <title> Xavier's Blog </title>
-            <div>
+            <div className="min-h-screen dark:bg-slate-900">
 
                 <div className="flex items-center justify-center">
                     <PersonalMessage />
