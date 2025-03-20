@@ -81,3 +81,8 @@ server: {
     port: 8002,
     host: '127.0.0.1'
 }
+
+
+
+How to upload to firebase? 
+Will use make use of a seperate private app that will authenticate and write that way.
