@@ -86,3 +86,11 @@ server: {
 
 How to upload to firebase? 
 Will use make use of a seperate private app that will authenticate and write that way.
+
+3/21/25
+In firebase the docRef ID is the name of the document (e.g. creating-this-blog).
+
+When viewing blog list using Firestore data, you could leverage the individual docRef IDs to pass to a global context to know which blog to fetch.
+If there is no url based approach, we can make a context: BlogID
+
+https://ui.dev/react-router-url-parameters

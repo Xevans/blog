@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-function BlogList() {
+function DevBlogList() {
     // props = category {Programming}
     return (
         <>
@@ -15,7 +15,7 @@ function BlogList() {
                     <div></div>
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:dark:bg-gray-600 hover:bg-gray-400">
-                        <Link to="mission">
+                        <Link to="dev-blog">
                             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                             Creating This Blog.
                             </h5>
@@ -74,4 +74,4 @@ function BlogList() {
     )
 }
 
-export default BlogList;
+export default DevBlogList;

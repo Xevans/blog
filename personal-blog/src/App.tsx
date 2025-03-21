@@ -8,12 +8,13 @@ import Navigation from './routes/navigation/navigation.route'
 import Coding from './routes/coding-blog/coding.route'
 import Writing from './routes/writing-blog/writing-blog.route'
 import CodingProjects from './routes/coding-projects/coding-projects.route'
-import Mission from './components/blogs/coding/mission/mission.component'
-import BlogList from './components/blog-list/coding/blog-list.component'
+//import Mission from './components/blogs/coding/mission/mission.component'
+import DevBlogList from './components/blog-list/coding/dev-blog-list.component'
 import WritingBlogList from './components/blog-list/writing/writing-blog-list.component'
 import StoryOverview from './components/blogs/writing/story-overview.component'
 import NavProvider from './contexts/nav-context/nav-context.contexts'
 import CodeProjectList from './components/blog-list/coding-projects/code-project-list.component'
+import DevBlog from './components/blogs/coding/dev-blog/dev-blog'
 
 function App() {
   // use an empty tag instead of fragment in vite/typescript <> </>
@@ -30,9 +31,9 @@ function App() {
           <Route index element={<Home/>} />
 
           <Route path='dev-blogs/' element={<Coding/>}>
-            {/*Coding blogs go here */}
-            <Route index element={<BlogList/>} />
-            <Route path='mission' element={<Mission/>} />
+            {/*Coding blogs go here. Temp: <Route path='mission' element={<Mission/>} />*/}
+            <Route index element={<DevBlogList/>} />
+            <Route path='dev-blog' element={<DevBlog/>} />
           </Route>
 
           <Route path='writing-blogs/' element={<Writing/>}> 

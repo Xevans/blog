@@ -1,8 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
-import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore";
-import { BlogStorageType } from "../types/firestore/blog/types.blog";
+import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
 import { FeaturedBlogStorageType } from "../types/firestore/featured-blog/featured-blog.type";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,41 +23,48 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 //const analytics = getAnalytics(app);
 
-// firebase function wrapped in a helper function
-export const uploadBlog = async(collectionName: string, blog_document: BlogStorageType) => {
+
+
+
+
+// Retrieve 1 blog
+export const getBlog = async(collectionName: string, blog_document: string) => {
   try {
-    const docRef = await addDoc(collection(db, collectionName), blog_document);
-    console.log("Document written with ID: ", docRef.id);
+    const docRef = await doc(db, collectionName, blog_document);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      console.log(docSnap.data());
+      //return docSnap.data();
+    }
+
+    console.log("Document fetched with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
   }
 }
 
+
+
+
+
+// for blog lists on category parent route
 export const getBlogs = async(collectionName: string) => {
   try {
-    const blogSnapshot = await getDocs(collection(db, collectionName));
-    blogSnapshot.forEach((doc) => {
-      //console.log(`${doc.id} => ${doc.data()}`);
-      const { title, category, blurb, content, date, media, media_attribution, media_caption, media_links } = doc.data();
-      console.log(title);
-      console.log(category);
-      console.log(blurb);
-      console.log(content); // should be tags fix in firebase and add content field
-      console.log(date);
-      console.log(media);
-      console.log(media_attribution);
-      console.log(media_caption);
-      console.log(media_links);
-    });
+    // request collection data
+    // evaluate returned data
   } catch (e) {
     console.error("Error retrieving data: ", e);
   }
 }
 
 
+
+// for blog previews on home
 export const getPreviews = async(collectionName: string) => {
   try {
-    const blogSnapshot = await getDocs(collection(db, collectionName));
+    const blogSnapshot = await getDocs(collection(db, collectionName)); // all documents in collection
+
     const previews: FeaturedBlogStorageType[] = [];
     blogSnapshot.forEach((doc) => {
       //console.log(`${doc.id} => ${doc.data()}`);
