@@ -33,7 +33,7 @@ function App() {
           <Route path='dev-blogs/' element={<Coding/>}>
             {/*Coding blogs go here. Temp: <Route path='mission' element={<Mission/>} />*/}
             <Route index element={<DevBlogList/>} />
-            <Route path='dev-blog' element={<DevBlog/>} />
+            <Route path='diary/:id' element={<DevBlog/>} />
           </Route>
 
           <Route path='writing-blogs/' element={<Writing/>}> 

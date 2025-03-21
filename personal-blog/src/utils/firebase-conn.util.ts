@@ -30,24 +30,26 @@ const db = getFirestore(app)
 // Retrieve 1 blog
 export const getBlog = async(collectionName: string, blog_document: string) => {
   try {
+    //const docRef = await doc(db, collectionName, blog_document);
     const docRef = await doc(db, collectionName, blog_document);
     const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) {
-      console.log(docSnap.data());
-      //return docSnap.data();
+    if (docSnap.exists()) { 
+      //console.log(docSnap.data());
+      return docSnap.data();
+    } 
+    else {
+      throw new Error("Could not find snapshot with the given args.");
     }
-
-    console.log("Document fetched with ID: ", docRef.id);
   } catch (e) {
-    console.error("Error adding document: ", e);
+    console.error("Error fetching document: ", e);
   }
 }
 
 
 
 
-
+/*
 // for blog lists on category parent route
 export const getBlogs = async(collectionName: string) => {
   try {
@@ -57,7 +59,7 @@ export const getBlogs = async(collectionName: string) => {
     console.error("Error retrieving data: ", e);
   }
 }
-
+*/
 
 
 // for blog previews on home

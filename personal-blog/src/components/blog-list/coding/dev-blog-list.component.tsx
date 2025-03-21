@@ -15,7 +15,7 @@ function DevBlogList() {
                     <div></div>
 
                     <div className="max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:dark:bg-gray-600 hover:bg-gray-400">
-                        <Link to="dev-blog">
+                        <Link to={`diary/${"creating-this-blog"}`}> {/*This will be dynamic when we leverage firebase for the lists*/}
                             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                             Creating This Blog.
                             </h5>
