@@ -24,7 +24,9 @@ function Coding() {
             {/*Renders a list of articles (dont worry about db for now). 
             Just simulate what would be in a DB*/}
 
-            <Outlet/>
+            <div className="dark:bg-gray-900">
+                <Outlet/>
+            </div>
 
 
             {/*

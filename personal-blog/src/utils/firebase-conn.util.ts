@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
 import { FeaturedBlogStorageType } from "../types/firestore/featured-blog/featured-blog.type";
+import { BlogListData } from "../interfaces/blog-interface";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -28,15 +29,15 @@ const db = getFirestore(app)
 
 
 // Retrieve 1 blog
-export const getBlog = async(collectionName: string, blog_document: string) => {
+export const getBlog = async(collection_name: string, blog_document: string) => {
   try {
-    //const docRef = await doc(db, collectionName, blog_document);
-    const docRef = await doc(db, collectionName, blog_document);
-    const docSnap = await getDoc(docRef);
+    //const doc_ref = await doc(db, collection_name, blog_document);
+    const doc_ref = await doc(db, collection_name, blog_document);
+    const doc_snap = await getDoc(doc_ref);
 
-    if (docSnap.exists()) { 
-      //console.log(docSnap.data());
-      return docSnap.data();
+    if (doc_snap.exists()) { 
+      //console.log(doc_snap.data());
+      return doc_snap.data();
     } 
     else {
       throw new Error("Could not find snapshot with the given args.");
@@ -49,17 +50,45 @@ export const getBlog = async(collectionName: string, blog_document: string) => {
 
 
 
-/*
+
 // for blog lists on category parent route
-export const getBlogs = async(collectionName: string) => {
+export const getBlogList = async(collectionName: string) => {
   try {
-    // request collection data
+    // request collection
+    const collection_snapshot = await getDocs(collection(db, collectionName)); // all documents in collection
     // evaluate returned data
+    if (collection_snapshot) {
+
+      const list: BlogListData[] = [] 
+
+      collection_snapshot.forEach((docSnap) => { // for each el, extract data for blog list then store each element to list
+        const doc = docSnap.data();
+
+        const { blog_document, createdAt } = doc;
+        const { header } = blog_document;
+        const { seconds } = createdAt;
+        
+        list.push(
+          {
+            blog_id: docSnap.id,
+            header: header,
+            creation_time: seconds
+          }
+        );
+
+      });
+
+      return list;
+    }
+    else {
+      throw new Error("Could not find collection or collection has no documents");
+      
+    }
   } catch (e) {
     console.error("Error retrieving data: ", e);
   }
 }
-*/
+
 
 
 // for blog previews on home

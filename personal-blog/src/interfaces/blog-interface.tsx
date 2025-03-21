@@ -21,7 +21,15 @@ export interface BlogSection {
     media_attribution: string,
 }
 
+// structure for a blog header and its sections
 export interface BlogData {
     header: BlogHeader,
     sections: BlogSection[],
+}
+
+//structure for a BlogList item
+export interface BlogListData {
+    blog_id: string,
+    header: BlogHeader, // see definition above
+    creation_time: number // seconds (server time)
 }

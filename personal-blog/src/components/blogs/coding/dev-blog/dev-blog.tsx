@@ -12,6 +12,7 @@ function DevBlog() {
     const [blog_header, setBlogHeader] = useState<BlogHeader>();
     const [blog_sections, setBlogSections] = useState<BlogSection[]>();
     const [blog_date, setBlogDate] = useState("");
+    const [ isVisible, setIsVisible ] = useState(false);
 
 
     const { id } = useParams();
@@ -28,11 +29,9 @@ function DevBlog() {
     const getBlogData = async () => {
         try {
             if (id) {
-                console.log(id);
                 const blog_snapshot = await getBlog("coding", id);
 
                 if (blog_snapshot) {
-                    console.log(blog_snapshot);
                     const { blog_document, createdAt } = blog_snapshot;
                     const { header, content } = blog_document;
                     const { seconds } = createdAt;
@@ -57,7 +56,14 @@ function DevBlog() {
 
 
     useEffect(() => {
-        getBlogData();
+        
+        try {
+            getBlogData();
+            setIsVisible(true);
+        } catch (e) {
+            setIsVisible(false);
+            console.error(e);
+        }
     },[]);
 
 
@@ -81,7 +87,7 @@ function DevBlog() {
                 <>
                     <title> {title} </title>
     
-                    <div className="items-center justify-center dark:text-slate-100 max-w-5xl ml-auto mr-auto min-h-screen">
+                    <div className={`items-center justify-center dark:text-slate-100 max-w-5xl ml-auto mr-auto min-h-screen transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
     
                         <div className="flex grid-cols-4 gap-4">
                             <div className="flex flex-col">
