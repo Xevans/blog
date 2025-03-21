@@ -94,3 +94,12 @@ When viewing blog list using Firestore data, you could leverage the individual d
 If there is no url based approach, we can make a context: BlogID
 
 https://ui.dev/react-router-url-parameters
+
+
+-----------------
+
+
+Tasks:
+- Implement dynamic fetch and render to dev-blogs/diary/:id (leverage use param in react router) [done]
+- Implement dynamic fetch and render to dev blog list (maybe show a preview image? [think like a rectangle left 1/3 is image, right 2/3 is text])
+- Apply to other blog routes
