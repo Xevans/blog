@@ -21,33 +21,12 @@ const HamburgerButton = forwardRef<HTMLButtonElement, Props>((props, ref) => (
 ));
 
 
-/*const HamburgerMenu = forwardRef(function (props, ref: null | null = null) {
-
-    return (
-        <>
-            <div className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            ref={ref} {...props}
-            >
-                <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 18L20 18" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M4 12L20 12" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M4 6L20 6" stroke="#b0bec5" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </div>
-        </>
-    );
-
-});*/
-
-
 
 
 
 function Navigation() {
 
     const {current_route, updateRoute} = useContext(NavContext) as NavContextType;
-
-    //const [currentRoute, setCurrentRoute] = useState(current_route);
 
     useEffect(() => {
 
@@ -60,9 +39,9 @@ function Navigation() {
     // Navigation: array of json objects.
     const navigation = [
         { name: 'Home', href: '/', current: checkRoute('Home') },
-        { name: 'Dev Blog', href: '/dev-blogs', current: checkRoute('Dev Blog') },
-        { name: 'Writing Blog', href: '/writing-blogs', current: checkRoute('Writing Blog') },
-        { name: 'Coding Projects', href: '/coding-projects', current: checkRoute('Coding Projects') },
+        { name: 'Dev Blog', href: '/dev', current: checkRoute('Dev Blog') },
+        { name: 'Writing Blog', href: '/writing', current: checkRoute('Writing Blog') },
+        { name: 'Coding Projects', href: '/dev-projects', current: checkRoute('Coding Projects') },
     ]
     
     function checkRoute(name: string) {

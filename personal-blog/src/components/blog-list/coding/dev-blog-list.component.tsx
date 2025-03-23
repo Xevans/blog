@@ -144,7 +144,7 @@ function DevBlogList() {
 
 
             
-            {/*
+            {/* // keep to remember blog topic ideas
             <div className="ml-auto mr-auto pt-24 dark:bg-gray-900 min-h-screen">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl ml-auto mr-auto pb-32">

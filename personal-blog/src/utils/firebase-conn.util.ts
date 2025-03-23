@@ -70,7 +70,7 @@ export const getBlogList = async(collectionName: string) => {
         
         list.push(
           {
-            blog_id: docSnap.id,
+            blog_id: docSnap.id, // actual name of document
             header: header,
             creation_time: seconds
           }

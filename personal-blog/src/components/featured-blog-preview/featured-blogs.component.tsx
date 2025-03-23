@@ -45,103 +45,39 @@ function FeaturedBlogPreview() {
                         {
                             previews.length > 0  &&
 
-                            previews.map((item, key) => {
-                                return (
-                                    <div key={key}>
-                                        <img src={item.media}  className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
+                                previews.map((item, key) => {
+                                    return (
+                                        <div key={key}>
+                                            <img src={item.media}  className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
 
-                                        <div className="mt-8">
-                                            <span className="text-blue-500 uppercase">{item.tag}</span>
+                                            <div className="mt-8">
+                                                <span className="text-blue-500 uppercase">{item.tag}</span>
 
-                                            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                                                {item.title}
-                                            </h1>
+                                                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                                                    {item.title}
+                                                </h1>
 
-                                            <p className="mt-2 text-gray-500 dark:text-gray-400">
-                                                {item.highlight}
-                                            </p>
+                                                <p className="mt-2 text-gray-500 dark:text-gray-400">
+                                                    {item.highlight}
+                                                </p>
 
-                                            <div className="flex items-center justify-between mt-4">
-                                                <div>
-                                                    <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
-                                                        {item.author}
-                                                    </a>
+                                                <div className="flex items-center justify-between mt-4">
+                                                    <div>
+                                                        <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                                                            {item.author}
+                                                        </a>
 
-                                                    <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
+                                                        <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
+                                                    </div>
+
+                                                    <Link to={item.linkto} className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
                                                 </div>
 
-                                                <Link to={item.linkto} className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
                                             </div>
-
                                         </div>
-                                    </div>
-                                )
-                            })
+                                    )
+                                })
                         }
-                        
-
-
-
-
-                        {/*
-                        <div>
-                            <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/awakening-promo-1" className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
-
-                            <div className="mt-8">
-                                <span className="text-blue-500 uppercase">Fiction Writing</span>
-
-                                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                                    Get to know my novel: Awakening! </h1>
-
-                                <p className="mt-2 text-gray-500 dark:text-gray-400">
-                                    A psychological fiction adventure through dream and reality! (With fantasy and horror elements). Inspired by my experiences and the coming of age stories I grew up with.
-                                </p>
-
-                                <div className="flex items-center justify-between mt-4">
-                                    <div>
-                                        <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
-                                            Xavier E.
-                                        </a>
-
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
-                                    </div>
-
-                                    <Link to="writing-blogs/story-overview" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-
-                        <div>
-                            <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/mern1" className="object-cover object-center w-full h-64 rounded-lg lg:h-80" />
-
-                            <div className="mt-8">
-                                <span className="text-blue-500 uppercase">Developer Diary</span>
-
-                                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                                    Building the Local History Archive as a MERN app. A step by step restrospective.
-                                </h1>
-
-                                <p className="mt-2 text-gray-500 dark:text-gray-400">
-                                    When stepping into my first IT job while pursuing my undergrad in Software Engineering, I took on one of the most enriching projects that has left much to reflect on and consider for the future.
-                                </p>
-
-                                <div className="flex items-center justify-between mt-4">
-                                    <div>
-                                        <a href="#" className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
-                                            Xavier E.
-                                        </a>
-
-                                        <p className="text-sm text-gray-500 dark:text-gray-400">December, 2024</p>
-                                    </div>
-
-                                    <Link to="#" className="inline-block text-blue-500 underline hover:text-blue-400">Read more</Link>
-                                </div>
-                            </div>
-                        </div> */}
 
                         
                     </div>
