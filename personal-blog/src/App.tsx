@@ -12,8 +12,8 @@ import DevBlogList from './components/blog-list/coding/dev-blog-list.component'
 import WritingBlogList from './components/blog-list/writing/writing-blog-list.component'
 import CodeProjectList from './components/blog-list/coding-projects/code-project-list.component'
 
-import DevBlog from './components/blogs/coding/dev-blog/dev-blog'
-import WritingBlog from './components/blogs/writing/writing-blog'
+import DevBlog from './components/blogs/coding/dev-blog/dev-blog.component'
+import WritingBlog from './components/blogs/writing/writing-blog.component'
 
 function App() {
   // use an empty tag instead of fragment in vite/typescript <> </>

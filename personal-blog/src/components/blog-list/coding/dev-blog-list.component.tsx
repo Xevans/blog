@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { getBlogList } from "../../../utils/firebase-conn.util";
 import { useEffect, useState } from "react";
-import { BlogListData } from "../../../interfaces/blog-interface";
+import { BlogListData } from "../../../interfaces/blog-interface.inteface";
 
 
 function DevBlogList() {

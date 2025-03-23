@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
 import { FeaturedBlogStorageType } from "../types/firestore/featured-blog/featured-blog.type";
-import { BlogListData } from "../interfaces/blog-interface";
+import { BlogListData } from "../interfaces/blog-interface.inteface";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

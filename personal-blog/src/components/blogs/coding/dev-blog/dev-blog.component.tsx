@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { getBlog } from "../../../utils/firebase-conn.util"; 
+import { getBlog } from "../../../../utils/firebase-conn.util";
 import { useParams } from "react-router-dom";
-import { BlogHeader, BlogSection } from "../../../interfaces/blog-interface";
+import { BlogHeader, BlogSection } from "../../../../interfaces/blog-interface.inteface";
 
 
-function WritingBlog() {
+function DevBlog() {
 
+    // next task, add this component to the coding route parnt under outlet.
+    // will worry about dynamic fetching later.
 
     const [blog_header, setBlogHeader] = useState<BlogHeader>();
     const [blog_sections, setBlogSections] = useState<BlogSection[]>();
@@ -27,7 +29,7 @@ function WritingBlog() {
     const getBlogData = async () => {
         try {
             if (id) {
-                const blog_snapshot = await getBlog("writing", id);
+                const blog_snapshot = await getBlog("coding", id);
 
                 if (blog_snapshot) {
                     const { blog_document, createdAt } = blog_snapshot;
@@ -122,8 +124,6 @@ function WritingBlog() {
     
                                         <div className="lg:ml-20 max-w-4xl text-lg pb-10">
                                             {blog_sections.map((this_section, key) => {
-    
-                                                console.log(this_section.paragraph)
                                                 
                                                 const {
                                                     heading,
@@ -236,4 +236,4 @@ function WritingBlog() {
     )
 }
 
-export default WritingBlog;
+export default DevBlog;
