@@ -196,7 +196,7 @@ function DevBlog() {
     
                                         </div>
     
-                                        <div className="lg:ml-20 mb-28">
+                                        <div className="lg:ml-20 mb-40 sm:mb-28">
                                             <h4 className="font-bold text-2xl">Thanks for reading!</h4>
                                         </div>
     

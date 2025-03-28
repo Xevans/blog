@@ -109,3 +109,5 @@ Tasks:
 - remove all cloudinary component implementations. Replace with optimized links in img tags
 - time to merge with main...merge time... What are best practices for merging?
 - write some blogs! Document this project as a blog.
+
+
