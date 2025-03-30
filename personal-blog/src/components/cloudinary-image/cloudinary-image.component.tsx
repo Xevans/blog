@@ -3,8 +3,7 @@ import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
 
-// in TS, you must define a type for a component you expect to pass props to
-// think of them as structs. A component exptecting types needs to know how that data will be structured.
+// Structure for custom cloudinary components // might refactor to a types folder repo
 interface CloudinaryProps {
     name: string;
     width: number;

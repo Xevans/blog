@@ -1,19 +1,19 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 
-
-
+import NavProvider from './contexts/nav-context/nav-context.contexts'
 import Home from './routes/home/home.route'
 import Navigation from './routes/navigation/navigation.route'
 import Coding from './routes/coding-blog/coding.route'
 import Writing from './routes/writing-blog/writing-blog.route'
 import CodingProjects from './routes/coding-projects/coding-projects.route'
-import Mission from './components/blogs/coding/mission/mission.component'
-import BlogList from './components/blog-list/coding/blog-list.component'
+
+import DevBlogList from './components/blog-list/coding/dev-blog-list.component'
 import WritingBlogList from './components/blog-list/writing/writing-blog-list.component'
-import StoryOverview from './components/blogs/writing/story-overview.component'
-import NavProvider from './contexts/nav-context/nav-context.contexts'
-import CodeProjectList from './components/blog-list/coding-projects/code-project-list'
+import CodeProjectList from './components/blog-list/coding-projects/code-project-list.component'
+
+import DevBlog from './components/blogs/coding/dev-blog/dev-blog.component'
+import WritingBlog from './components/blogs/writing/writing-blog.component'
 
 function App() {
   // use an empty tag instead of fragment in vite/typescript <> </>
@@ -29,20 +29,20 @@ function App() {
         <Route path='/*' element={<Navigation />} > 
           <Route index element={<Home/>} />
 
-          <Route path='dev-blogs/' element={<Coding/>}>
-            {/*Coding blogs go here */}
-            <Route index element={<BlogList/>} />
-            <Route path='mission' element={<Mission/>} />
+          <Route path='dev/' element={<Coding/>}>
+            {/*software (dev)elopment route. */}
+            <Route index element={<DevBlogList/>} />
+            <Route path='diary/:id' element={<DevBlog/>} />
           </Route>
 
-          <Route path='writing-blogs/' element={<Writing/>}> 
-            {/*Writing Blogs */}
+          <Route path='writing/' element={<Writing/>}> 
+            {/*Writing route. */}
             <Route index element={<WritingBlogList/>} />
-            <Route path='story-overview' element={<StoryOverview/>} />
+            <Route path='diary/:id' element={<WritingBlog/>} />
           </Route>
           
-          <Route path='coding-projects/' element={<CodingProjects/>}>
-            {/*Coding Projects */}
+          <Route path='dev-projects/' element={<CodingProjects/>}>
+            {/*Dev Projects and demos route */}
             <Route index element={<CodeProjectList/>} />
           </Route>
         </Route>

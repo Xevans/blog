@@ -1,4 +1,4 @@
-import CloudinaryImageX from "../cloudinary-image/cloudinary-image.component";
+
 
 function PersonalMessage() {
 
@@ -8,7 +8,7 @@ function PersonalMessage() {
             <div className="p-4 pt-20">
             <figure className="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
                 
-                <CloudinaryImageX name="link-dizzy" width={384} height={512} definitions="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto object-cover"/>
+                <img src="https://res.cloudinary.com/dn9rcml4g/image/upload/f_auto,q_auto/v1/blog-pics/me3" className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto object-cover"/>
 
                 <div className="pt-6 md:p-8 text-center md:text-center space-y-4">
                     <blockquote>

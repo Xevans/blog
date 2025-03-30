@@ -21,33 +21,9 @@ function Coding() {
     return (
         <>
 
-            {/*Renders a list of articles (dont worry about db for now). 
-            Just simulate what would be in a DB*/}
-
-            <Outlet/>
-
-
-            {/*
-            <div className="items-center justify-center dark:text-slate-100">
-
-                <div className="flex grid-cols-4 gap-4">
-                    <div className="flex flex-col">
-                        <div className="dark:bg-slate-700 p-16 mt-8 rounded-md">
-                            <h4 className="text-xl">Projects / Coding</h4>
-                            <h2 className="text-3xl">Developer Journey</h2>
-
-                            <p className="pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus, enim ipsam earum doloribus in exercitationem laboriosam deserunt, cupiditate ullam illum vitae repellat optio eos dicta quo distinctio non accusamus.</p>
-                        </div>
-                        <div>
-                            <BlogArticle />
-                        </div>
-                    </div>
-
-                    <div>
-                        <ArticlesSidebar />
-                    </div>
-                </div>
-            </div>*/}
+            <div className="dark:bg-gray-900">
+                <Outlet/>
+            </div>
 
         </>
     )

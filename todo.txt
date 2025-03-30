@@ -60,4 +60,54 @@ Tasks:
     - chiptune playing game or tracker type game.
 
 
+Firebase data fetch design:
+    - Home route
+        - fetch from the featured blog collection
+    - Blog list component
+        - if no data in blog previews context
+            - fetch title, blurb, category, date, tags of documents in the corresponding collection
+    - Blog Article
+        - fetch the document via the identifyer in the route params and update the 'current blog' context.
+
+        
+        - Now the problem. How do I send a link to a specific article? This is all just DOM and context manipulation so far.
+            - See Q/A for adding params to routes: https://stackoverflow.com/questions/75491261/how-can-i-dynamically-create-a-route-in-react
+                (dynamically create routes using ID's that corespond with some obj to be retrieved.)
+
+        
+Vite was not hosting to the correct local host when hosted in a dev container.
+Fix: Adding the following config fixed the hosting params.
+server: {
+    port: 8002,
+    host: '127.0.0.1'
+}
+
+
+
+How to upload to firebase? 
+Will use make use of a seperate private app that will authenticate and write that way.
+
+3/21/25
+In firebase the docRef ID is the name of the document (e.g. creating-this-blog).
+
+When viewing blog list using Firestore data, you could leverage the individual docRef IDs to pass to a global context to know which blog to fetch.
+If there is no url based approach, we can make a context: BlogID
+
+https://ui.dev/react-router-url-parameters
+
+
+-----------------
+
+
+Tasks:
+- Implement dynamic fetch and render to dev-blogs/diary/:id (leverage use param in react router) [done]
+- Implement dynamic fetch and render to dev blog list (maybe show a preview image? [think like a rectangle left 1/3 is image, right 2/3 is text]) [done]
+    - start by writing wrapper function implementation for retreival in firebase util
+    - then add a call to wrapper function with test param(s).
+
+- Apply above to other blog routes
+- remove all cloudinary component implementations. Replace with optimized links in img tags
+- time to merge with main...merge time... What are best practices for merging?
+- write some blogs! Document this project as a blog.
+
 
