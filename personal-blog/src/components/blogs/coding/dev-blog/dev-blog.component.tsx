@@ -109,7 +109,7 @@ function DevBlog() {
     
                                             <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 mx-auto mt-8">
                                                 <img src={featured_media_link} className="w-full h-full rounded-lg" alt="" />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                                                <div className="absolute inset-0"></div>
                                                 <h3 className="z-10 mt-3 text-3xl font-bold text-white">
                                                     {featured_media_caption}
                                                 </h3>
@@ -164,17 +164,18 @@ function DevBlog() {
                                                             media_link.length > 0 && 
                                                             
                                                             <>
-                                                                <div className="p-10 max-w-lg max-h-lg mx-auto">
-                                                                    <img src={media_link} className="w-full h-full rounded-lg" alt="" />
-                                                                </div>
-    
-                                                                <div className="text-sm">
-                                                                    <div>
-                                                                        {media_caption}
-                                                                    </div>
-    
-                                                                    <div>
-                                                                        {media_attribution}
+                                                                <div className="p-10 max-w-4xl max-h-4xl mx-auto">
+                                                                        <img src={media_link} className="w-full h-full rounded-lg" alt="" />
+                                                                    
+        
+                                                                    <div className="text-base pt-2">
+                                                                        <div>
+                                                                            <b>{media_caption}</b>
+                                                                        </div>
+        
+                                                                        <div className="text-sm">
+                                                                            {media_attribution}
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </>

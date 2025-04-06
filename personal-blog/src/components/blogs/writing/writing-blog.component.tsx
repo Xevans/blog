@@ -162,17 +162,18 @@ function WritingBlog() {
                                                             media_link.length > 0 && 
                                                             
                                                             <>
-                                                                <div className="p-10 max-w-lg max-h-lg mx-auto">
-                                                                    <img src={media_link} className="w-full h-full rounded-lg" alt="" />
-                                                                </div>
-    
-                                                                <div className="text-sm">
-                                                                    <div>
-                                                                        {media_caption}
-                                                                    </div>
-    
-                                                                    <div>
-                                                                        {media_attribution}
+                                                                <div className="p-10 max-w-4xl max-h-4xl mx-auto">
+                                                                        <img src={media_link} className="w-full h-full rounded-lg" alt="" />
+                                                                    
+        
+                                                                    <div className="text-base pt-2">
+                                                                        <div>
+                                                                            {media_caption}
+                                                                        </div>
+        
+                                                                        <div className="text-sm">
+                                                                            <br>{media_attribution}</br>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </>
