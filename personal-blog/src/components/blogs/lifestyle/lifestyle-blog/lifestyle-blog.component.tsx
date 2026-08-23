@@ -4,10 +4,7 @@ import { useParams } from "react-router-dom";
 import { BlogHeader, BlogSection } from "../../../../interfaces/blog-interface.inteface";
 
 
-function DevBlog() {
-
-    // next task, add this component to the coding route parnt under outlet.
-    // will worry about dynamic fetching later.
+function LifeStyleBlog() {
 
     const [blog_header, setBlogHeader] = useState<BlogHeader>();
     const [blog_sections, setBlogSections] = useState<BlogSection[]>();
@@ -30,7 +27,7 @@ function DevBlog() {
         try {
             if (id) {
                 console.log(id)
-                const blog_snapshot = await getBlog("coding", id);
+                const blog_snapshot = await getBlog("lifestyle", id);
 
                 if (blog_snapshot) {
                     const { blog_document, createdAt } = blog_snapshot;
@@ -44,6 +41,7 @@ function DevBlog() {
                     // convert seconds to date
                     setBlogDate(convertSecondsToDate(seconds));
                 }
+                console.log("success")
                 
             }
             else {
@@ -93,7 +91,7 @@ function DevBlog() {
                         <div className="flex grid-cols-4 gap-4">
                             <div className="flex flex-col">
                                 <div className="dark:bg-slate-700 p-16 min-w-3xl mt-8 rounded-md">
-                                    <h4 className="text-xl">Projects / {category}</h4>
+                                    <h4 className="text-xl">Personal / {category}</h4>
     
                                     <h2 className="text-3xl">{title}</h2>
     
@@ -238,4 +236,4 @@ function DevBlog() {
     )
 }
 
-export default DevBlog;
+export default LifeStyleBlog;

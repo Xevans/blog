@@ -41,6 +41,7 @@ function Navigation() {
         { name: 'Home', href: '/', current: checkRoute('Home') },
         { name: 'Dev Blog', href: '/dev', current: checkRoute('Dev Blog') },
         { name: 'Writing Blog', href: '/writing', current: checkRoute('Writing Blog') },
+        { name: 'Lifestyle Blog', href: '/lifestyle', current: checkRoute('Lifestyle Blog') },
         { name: 'Coding Projects', href: '/dev-projects', current: checkRoute('Coding Projects') },
     ]
     
